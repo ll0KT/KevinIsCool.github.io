@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 获取网络适配器列表
-category: technology
+category: tech
 ---
 
 {{ page.title }}
