@@ -56,6 +56,7 @@ table {
 /* navigater
 /*
 /*****************************************************************************/
+/*
 .nav{
    margin-left:-150px;
    display: inline-block;
@@ -100,6 +101,8 @@ table {
 	a:hover #bg1{ background: #539770; }
 	a:hover #bg2{ background: #4B7D74; }
 	a:hover #bg3{ background: #8DC2BC; }
+
+*/
 	
 /*****************************************************************************/
 /*
