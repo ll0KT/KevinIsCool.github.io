@@ -11,7 +11,7 @@ category: tech
 **文章主要介绍WinPcap的编程以及相关的源码分析，程序的编写用的是纯`C`语言，并且希望读者拥有良好的网络及网络协议的知识。我们已经在第一篇文章中介绍了`VS`下的开发环境配置。前面的几节，首先我们运用`WinPcap`提供的几个`API`，进行一些简单的编程，实现几个基本的、简单的功能。**
 <br />
 ##这一节，介绍获取网络适配器列表      
-###相关函数描述：
+###>相关函数描述：
 {% highlight C linenos %}
 //返回所找到的适配器列表
 pacp_findalldevs_ex(char *source,  struct pcap_rmtauth *auth,  pacp_if_t **alldevs,  char *errorbuf) 
