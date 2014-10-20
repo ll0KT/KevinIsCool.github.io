@@ -69,7 +69,7 @@ main()
         fprintf(stderr,"Error in pcap_findalldevs_ex: %s\n", errbuf);
         exit(1);
     }
-    
+	
     /* 打印设备列表 */
     for(d= alldevs; d != NULL; d= d->next)
     {
@@ -200,7 +200,6 @@ char *iptos(u_long in)
 	static char output[IPTOSBUFFERS][3 * 4 + 3 + 1];
 	static short which;
 	u_char *p;
-
 	p = (u_char *)&in;
 	which = (which + 1 == IPTOSBUFFERS ? 0 : which + 1);
 	_snprintf_s(output[which], sizeof(output[which]),
