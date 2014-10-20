@@ -53,6 +53,56 @@ table {
 
 /*****************************************************************************/
 /*
+/* navigater
+/*
+/*****************************************************************************/
+.nav{
+   margin-left:-150px;
+   display: inline-block;
+   float: left;
+   clear:both;
+	}
+.a{
+   position: relative;
+   left: 30px;
+   padding: 10px 30px 10px 60px;
+   margin: 10px;
+		background: #8DC2BC;
+		x-box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.5);
+  		box-shadow: 8px 0 8px -8px rgba(0, 0, 0, 0.5);
+  		transition: all 0.3s ease-in-out 0.1s;
+  		-o-transition: all 0.3s ease-in-out 0.1s;
+  		-ms-transition: all 0.3s ease-in-out 0.1s;
+  		-moz-transition: all 0.3s ease-in-out 0.1s;
+  		-webkit-transition: all 0.3s ease-in-out 0.1s;		
+	}
+	.a:hover{
+		position: relative;
+		left: 100%;
+		margin-left: -32px;
+                background-color: rgba(27, 79, 147,0.5); 
+  		box-shadow: 0 -8px 8px -8px rgba(0, 0, 0, 0.5),
+    				0 8px 8px -8px rgba(0, 0, 0, 0.5);
+  		transition: all 0.3s ease-in-out;
+  		-o-transition: all 0.3s ease-in-out;
+  		-ms-transition: all 0.3s ease-in-out;
+  		-moz-transition: all 0.3s ease-in-out;
+  		-webkit-transition: all 0.3s ease-in-out;
+	}
+	.span{
+  		display: inline-block;
+ 	    color: #fff;
+ 	    font-family: 'Droid Sans', sans-serif;
+  	    font-size: 16px;
+ 	    font-weight: bold;
+  		white-space: nowrap;
+	}
+	a:hover #bg1{ background: #539770; }
+	a:hover #bg2{ background: #4B7D74; }
+	a:hover #bg3{ background: #8DC2BC; }
+	
+/*****************************************************************************/
+/*
 /* Home
 /*
 /*****************************************************************************/

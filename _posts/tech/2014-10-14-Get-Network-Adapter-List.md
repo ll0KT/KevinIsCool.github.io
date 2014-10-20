@@ -14,8 +14,10 @@ category: tech
 
 ##相关函数描述：
 {% highlight C linenos %}
-pacp_findalldevs_ex(char *source,  struct pcap_rmtauth *auth,  pacp_if_t **alldevs,  char *errorbuf)  //返回所找到的适配器列表
-pacp_freealldevs(pacp_if_t **alldevs)  //释放设备列表所占用的空间
+//返回所找到的适配器列表
+pacp_findalldevs_ex(char *source,  struct pcap_rmtauth *auth,  pacp_if_t **alldevs,  char *errorbuf) 
+//释放设备列表所占用的空间
+pacp_freealldevs(pacp_if_t **alldevs)  
 {% endhighlight %}
 
 ##相关结构体描述：
