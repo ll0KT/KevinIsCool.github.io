@@ -11,11 +11,7 @@ category: tech
 **文章主要介绍WinPcap的编程以及相关的源码分析，程序的编写用的是纯`C`语言，并且希望读者拥有良好的网络及网络协议的知识。我们已经在第一篇文章中介绍了`VS`下的开发环境配置。前面的几节，首先我们运用`WinPcap`提供的几个`API`，进行一些简单的编程，实现几个基本的、简单的功能。**
 <br />
 ##这一节，介绍获取网络适配器列表      
-###>    相关函数描述：
-###>		相关函数描述：
-###    >相关函数描述：
-###	>相关函数描述：
-###          >相关函数描述：
+###1. 相关函数描述：
 {% highlight C linenos %}
 //返回所找到的适配器列表
 pacp_findalldevs_ex(char *source,  struct pcap_rmtauth *auth,  pacp_if_t **alldevs,  char *errorbuf) 
@@ -23,9 +19,9 @@ pacp_findalldevs_ex(char *source,  struct pcap_rmtauth *auth,  pacp_if_t **allde
 pacp_freealldevs(pacp_if_t **alldevs)  
 {% endhighlight %}
 
-###相关结构体描述：
+###2. 相关结构体描述：
 
-#####pcap_if_t
+#####2.1 pcap_if_t
 {% highlight C linenos %}
 typedef struct pcap_if pcap_if_t;
 struct pcap_if {
@@ -42,7 +38,7 @@ struct pcap_if {
 };
 {% endhighlight %}
 
-#####pcap_addr_t结构体
+#####2.2 pcap_addr_t结构体
 {% highlight C linenos %}
 typedef pcap_addr pcap_addr_t;
 struct pcap_addr {
@@ -54,7 +50,7 @@ struct pcap_addr {
 };
 {% endhighlight %}
 
-###代码：
+###3. 代码：
 {% highlight C linenos %}
 #define WIN32
 #define HAVE_REMOTE
@@ -98,14 +94,13 @@ main()
 }
 {% endhighlight %}
 
-###注意：
+###4. 注意：
 
 1.	`pcap_findalldevs_ex`函数和其他函数一样，一旦发生错误，`errbuf`参数将写入错误信息。
 2.	不是所有的操作系统都支持`WinPcap`提供的网络接口。因此，如果想编写一个可以移植的应用程序，就必须考虑什么情况下`description`为`NULL`。
 3.	当设备使用结束后，需要调用`pcap_freealldevs`函数释放设备列表所占用的资源。
 <br />
-###以下是获取已安装设备的高级信息：
-
+###5. 以下是获取已安装设备的高级信息：
 {% highlight C linenos %}
 #define WIN32
 #define HAVE_REMOTE
