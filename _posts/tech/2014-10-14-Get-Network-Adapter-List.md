@@ -9,9 +9,9 @@ category: tech
 <p class="meta">14 October 2014 - Harbin</p>
 
 **文章主要介绍WinPcap的编程以及相关的源码分析，程序的编写用的是纯`C`语言，并且希望读者拥有良好的网络及网络协议的知识。我们已经在第一篇文章中介绍了`VS`下的开发环境配置。前面的几节，首先我们运用`WinPcap`提供的几个`API`，进行一些简单的编程，实现几个基本的、简单的功能。**
-
+<br />
 ##这一节，介绍获取网络适配器列表
-
+<br />
 ###相关函数描述：
 {% highlight C linenos %}
 //返回所找到的适配器列表
@@ -19,8 +19,9 @@ pacp_findalldevs_ex(char *source,  struct pcap_rmtauth *auth,  pacp_if_t **allde
 //释放设备列表所占用的空间
 pacp_freealldevs(pacp_if_t **alldevs)  
 {% endhighlight %}
-
+<br />
 ###相关结构体描述：
+<br />
 #####pcap_if_t
 {% highlight C linenos %}
 typedef struct pcap_if pcap_if_t;
@@ -37,6 +38,7 @@ struct pcap_if {
 	/*回环标记*/
 };
 {% endhighlight %}
+<br />
 #####pcap_addr_t结构体
 {% highlight C linenos %}
 typedef pcap_addr pcap_addr_t;
@@ -48,6 +50,7 @@ struct pcap_addr {
 	struct sockaddr *dstaddr; 	//P2P目标地址
 };
 {% endhighlight %}
+<br />
 ###代码：
 {% highlight C linenos %}
 #define WIN32
@@ -91,12 +94,15 @@ main()
     pcap_freealldevs(alldevs);
 }
 {% endhighlight %}
+<br />
 ###注意：
+<br />
 1.	`pcap_findalldevs_ex`函数和其他函数一样，一旦发生错误，`errbuf`参数将写入错误信息。
 2.	不是所有的操作系统都支持`WinPcap`提供的网络接口。因此，如果想编写一个可以移植的应用程序，就必须考虑什么情况下`description`为`NULL`。
 3.	当设备使用结束后，需要调用`pcap_freealldevs`函数释放设备列表所占用的资源。
-
+<br />
 ###以下是获取已安装设备的高级信息：
+<br />
 {% highlight C linenos %}
 #define WIN32
 #define HAVE_REMOTE
@@ -208,6 +214,7 @@ char *iptos(u_long in)
 	return output[which];
 }
 {% endhighlight %}
+<br />
 函数 `pcap_findalldevs_ex()` 除了获取本地适配器信息外，还能返回远程适配器信息和一个位于所给的本地文件夹的`pcap`文件列表。
 
 
