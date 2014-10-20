@@ -7,7 +7,7 @@ title: life
   <h1>Blog About Life</h1>
   <ul class="posts">
     {% for post in site.categories.life %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a style="text-decoration:none;" href="{{ post.url }}">{{ post.title }}</a></li>
+      <li><span>{{ post.date | date_to_string }}</span> &raquo;&nbsp; <a style="text-decoration:none;" href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
 </div>
