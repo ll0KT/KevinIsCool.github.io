@@ -21,7 +21,7 @@ pacp_freealldevs(pacp_if_t **alldevs)
 
 ###2. 相关结构体描述：
 
-#####2.1 pcap_if_t
+#####--2.1 pcap_if_t
 {% highlight C linenos %}
 typedef struct pcap_if pcap_if_t;
 struct pcap_if {
@@ -38,7 +38,7 @@ struct pcap_if {
 };
 {% endhighlight %}
 
-#####2.2 pcap_addr_t结构体
+#####--2.2 pcap_addr_t结构体
 {% highlight C linenos %}
 typedef pcap_addr pcap_addr_t;
 struct pcap_addr {
