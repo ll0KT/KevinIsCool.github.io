@@ -20,6 +20,7 @@ category: life
 
 下面简单的说一下Jekyll + Github Pages搭建博客的吧，不想特别详细的说了，因为网上类似的文章已经很多了，参考一下不是很难（但是是对于一个有相关知识的同学，对于没有相关概念的，那就得先学习一下了）。
 参考的博客如下：
+
 1. [Jekyll 简单的静态博客网站](http://jekyllcn.com/)
 2. [使用Github Pages建独立博客](http://beiyuu.com/github-pages/)
 3. [搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html)
@@ -30,7 +31,6 @@ category: life
 
 搞定博客，接下来就是写写文章了，不对，还是先做项目吧。
 
-我的CSDN：[智者千虑 必有一失](http://blog.csdn.net/u010311064)
 
 
 
