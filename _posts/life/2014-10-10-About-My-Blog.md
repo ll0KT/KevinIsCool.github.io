@@ -29,7 +29,7 @@ category: life
 
 关于网站的模板。我用的是：[Tom Preston-Werner](http://tom.preston-werner.com/)源代码：[github.com](https://github.com/mojombo/mojombo.github.io)。做了很多改动，就成我做的样子了。
 
-搞定博客，接下来就是写写文章了，不对，还是先做项目吧。
+搞定博客，接下来就是写写文章了。
 
 
 
