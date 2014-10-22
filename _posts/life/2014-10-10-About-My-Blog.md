@@ -19,10 +19,10 @@ category: life
 后来，看到了一个博客：[hack0nair](https://hack0nair.me/archive/)--哇，好简约哈，正合我意呀，so，下一波折腾又开始了。
 
 下面简单的说一下Jekyll + Github Pages搭建博客的吧，不想特别详细的说了，因为网上类似的文章已经很多了，参考一下不是很难（但是是对于一个有相关知识的同学，对于没有相关概念的，那就得先学习一下了）。参考的博客如下：
->[Jekyll 简单的静态博客网站](http://jekyllcn.com/)
->[使用Github Pages建独立博客](http://beiyuu.com/github-pages/)
->[搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html)
->[使用 GitHub, Jekyll 打造自己的免费独立博客](http://blog.csdn.net/on_1y/article/details/19259435)
+->[Jekyll 简单的静态博客网站](http://jekyllcn.com/)
+->[使用Github Pages建独立博客](http://beiyuu.com/github-pages/)
+->[搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html)
+->[使用 GitHub, Jekyll 打造自己的免费独立博客](http://blog.csdn.net/on_1y/article/details/19259435)
 
 
 关于网站的模板。我用的是：[Tom Preston-Werner](http://tom.preston-werner.com/)源代码：[github.com](https://github.com/mojombo/mojombo.github.io)。做了很多改动，就成我做的样子了。
