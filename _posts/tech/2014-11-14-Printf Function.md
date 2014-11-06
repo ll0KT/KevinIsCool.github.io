@@ -15,7 +15,7 @@ category: tech
 突然觉得真的有好久没有看C语言了，想一想，本科的时候还看Linux源码，现在一味的使用者C++，却连最基础的也模糊了，是时候回顾一下了。
 
 ##printf 函数
-{% highlight C linenos %}
+{% highlight C %}
 int printf(const char *format, [argument]);
 	format 为参数的输出格式，定义为：
 	%[flags][width][.perc][F|N|h|l] type
@@ -27,7 +27,7 @@ int printf(const char *format, [argument]);
         %o 整数的参数会被转成一无符号的八进制数字
         %x 整数的参数会被转成一无符号的十六进制数字，并以小写abcdef表示
         %X 整数的参数会被转成一无符号的十六进制数字，并以大写ABCDEF表示浮点型数
-    %f double 型的参数会被转成十进制数字，并取到小数点以下六位，四舍五入。
+		%f double 型的参数会被转成十进制数字，并取到小数点以下六位，四舍五入。
         %e double型的参数以指数形式打印，有一个数字会在小数点前，六位数字在小数点后，而在指数部分会以小写的e来表示。
         %E 与%e作用相同，唯一区别是指数部分将以大写的E 来表示。
         %g double 型的参数会自动选择以%f 或%e 的格式来打印，其标准是根据欲打印的数值及所设置的有效位数来决定。
@@ -38,7 +38,7 @@ int printf(const char *format, [argument]);
         %p 如果是参数是“void *”型指针则使用十六进制格式显示，near指针表示为：XXXX，far 指针表示为：XXXX：YYYY
 		%% 显示百分号本身　
 		%n 相连参量应是一个指针，其中存放已写字符的个数
- ###2.flags 规定输出格式，取值和含义如下
+###2.flags 规定输出格式，取值和含义如下
 		无 右对齐，左边填充0和空格
 		- 左对齐，右边填充空格
 		+ 在数字前增加符号 + 或 -
