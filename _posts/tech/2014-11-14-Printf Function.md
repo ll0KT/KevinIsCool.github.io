@@ -22,6 +22,7 @@ int printf(const char *format, [argument]);
 {% endhighlight %}
 
 ###1. type 含义
+	整数
 		%d 整数的参数会被转成一有符号的十进制数字
         %u 整数的参数会被转成一无符号的十进制数字
         %o 整数的参数会被转成一无符号的八进制数字
