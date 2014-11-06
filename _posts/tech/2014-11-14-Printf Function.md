@@ -9,7 +9,7 @@ category: tech
 <p class="meta">06 November 2014 - Harbin</p>
 
 昨天在反汇编的过程中，遇到一条printf的控制语句：
-{% highlight C linenos %}
+{% highlight C %}
 "hS7dos = 0x%lx, hWnd = 0x%lx"
 {% endhighlight %}
 突然觉得真的有好久没有看C语言了，想一想，本科的时候还看Linux源码，现在一味的使用者C++，却连最基础的也模糊了，是时候回顾一下了。
