@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 说说printf/scanf的格式控制符
+title: 说说 printf/scanf 的格式控制符
 category: tech
 ---
 
