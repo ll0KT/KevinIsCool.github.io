@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Intel Pin 的配置以及一个简单的例子
-category: tech
+category: Tech
 ---
 
 {{ page.title }}
