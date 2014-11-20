@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Winpcap系列--获取网络适配器列表
-category: Tech
+category: tech
 ---
 
 {{ page.title }}

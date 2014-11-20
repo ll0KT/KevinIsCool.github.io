@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 第一个故事 Jekyll+Github Page博客搭建
-category: Life
+category: life
 ---
 
 {{ page.title }}

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 说说 printf/scanf 的格式控制符
-category: Tech
+category: tech
 ---
 
 {{ page.title }}
