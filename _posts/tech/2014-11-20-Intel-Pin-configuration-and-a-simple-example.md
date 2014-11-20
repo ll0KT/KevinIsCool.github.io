@@ -12,7 +12,9 @@ category: tech
 [Pin 2.14 User Guide](https://software.intel.com/sites/landingpage/pintool/docs/67254/Pin/html/)
 
 ###下面具体说说Pin工具的配置
+
 下载地址：[Pin - A Dynamic Binary Instrumentation Tool](https://software.intel.com/en-us/articles/pin-a-dynamic-binary-instrumentation-tool "Pin - A Dynamic Binary Instrumentation Tool")
+
 1.	之前的Pin版本中，支持通过MicrosoftVisual Studio 2010的命令行运行nmake之类的批处理命令，从Pin 2.12版本开始（我用的是Pin 2.14），需要基于cygwin make来进行编译。
 
 2.	Cygwin安装的时候，默认不安装make工具，所以在安装Cygwin时要选择安装make工具（search make）。
@@ -28,5 +30,5 @@ category: tech
 
 参考：
 
-1.	[安装和使用 Intel PIn](http://www.xuebuyuan.com/2005064.html)
-2.	[pin 的使用简介 ——环境设置 基本工具的使用 相关知识](http://blog.csdn.net/familyvirtue/article/details/7768921)
+	[安装和使用 Intel PIn](http://www.xuebuyuan.com/2005064.html)
+	[pin 的使用简介 ——环境设置 基本工具的使用 相关知识](http://blog.csdn.net/familyvirtue/article/details/7768921)
