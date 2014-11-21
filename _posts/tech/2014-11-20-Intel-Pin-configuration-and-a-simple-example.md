@@ -30,5 +30,5 @@ category: tech
 
 参考：
 
-	[安装和使用 Intel PIn](http://www.xuebuyuan.com/2005064.html)
-	[pin 的使用简介 ——环境设置 基本工具的使用 相关知识](http://blog.csdn.net/familyvirtue/article/details/7768921)
+1.	[安装和使用 Intel Pin](http://www.xuebuyuan.com/2005064.html)    
+2.	[pin 的使用简介 ——环境设置 基本工具的使用 相关知识](http://blog.csdn.net/familyvirtue/article/details/7768921)
