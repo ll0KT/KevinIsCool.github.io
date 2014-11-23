@@ -23,7 +23,7 @@ category: tech
 
 4.	下载的Pin是个压缩包，解压即可。将Pin解压后的文件夹的位置（pin.exe上面一层文件夹）加入到path中，即可在命令行中使用Pin命令。
 
-5.	进入到source/tools/ManualExamples中（使用VS命令行），用make命令（同linux）可以编译所有例子。编译好后进入对应的32位或64位平台的文件夹（obj-ia32）中可以看到生成文件，windows下大多数生成的都是dll文件。然后使用pin命令pin -t trace.dll --"test.exe"即可运行itrace这个例子对test.exe(是自己编的一个exe放到相同目录下了，如果在其他地方要用完整的路径)进行分析，这个例子的输出在itrace.out中。运行完后可以查看该文件。
+5.	进入到source/tools/ManualExamples中（使用VS命令行），用make命令（同linux）可以编译所有例子。编译好后进入对应的32位或64位平台的文件夹（obj-ia32）中可以看到生成文件，windows下大多数生成的都是dll文件。然后使用pin命令pin -t itrace.dll --"test.exe"即可运行itrace这个例子对test.exe(是自己编的一个exe放到相同目录下了，如果在其他地方要用完整的路径)进行分析，这个例子的输出在itrace.out中。运行完后可以查看该文件。
 
 
 
