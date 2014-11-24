@@ -20,7 +20,7 @@ category: tech
 启动：串口1    
 端口模式：主机管道    
 启用：创建通道    
-端口/文件位置：\\\.\pipe\COM_1
+端口/文件位置：'\\\\.\pipe\COM_1'
 ####三. windows 7系统配置
 进入系统，以Administrator权限启动Command Line，键入命令：bcdedit，如下图。（因为我已经配置好了，所以会有3项）    
 ![DebuggedSystemSettings]({{ site.rul }}/images/20141124/DebuggedSystemSettings.png)    
