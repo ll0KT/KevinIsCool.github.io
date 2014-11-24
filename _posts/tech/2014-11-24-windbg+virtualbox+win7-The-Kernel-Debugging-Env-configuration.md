@@ -10,7 +10,7 @@ category: tech
 <p class="meta">24 November 2014 - Harbin</p>
 
 
-看了网上很多的教程，一般都是Windbg+Vmware+win7和Windbg+VirtualBox+xp或者是Windbg+Vmware+XP的，没有找到Windbg+VirtualBox+win7的，于是只能根据一个VMware的自己配置一下，看看运气如何了。验证过后，发现，有效。下面分4个部分，简要说说。    
+看了网上很多的教程，一般都是Windbg+Vmware+win7和Windbg+VirtualBox+xp或者是Windbg+Vmware+XP的，没有找到Windbg+VirtualBox+win7的，于是只能根据一个VMware的自己配置一下，看看运气如何了。验证过后，发现，有效。下面分4个部分，简要叙述。    
 ####一. 虚拟机和windows 7系统安装
 这部分就不详细说了，网上有很多很多的教程.
 ####二. 虚拟机配置
@@ -25,24 +25,24 @@ category: tech
 进入系统，以Administrator权限启动Command Line，键入命令：bcdedit，如下图。（因为我已经配置好了，所以会有3项）    
 ![DebuggedSystemSettings]({{ site.rul }}/images/20141124/DebuggedSystemSettings.png)    
 配置的命令依次为：    
-1. 设置端口COM1，比特率115200  
+1 设置端口COM1，比特率115200  
 {% highlight C %}  
 bcdedit /dbgsettings 或 bcdedit /dbgsettings serial bandrate:115200 debugport:1    
 {% endhighlight %}    
-2. 复制一个开机选项，计入OS的debug模式 (DebugEnty为显示的名字，可以修改)   
+2 复制一个开机选项，计入OS的debug模式 (DebugEnty为显示的名字，可以修改)   
 {% highlight C %}  
 bcdedit /copy {current} /d DebugEnty    
 {% endhighlight %}     
 **复制其中的ID号**  
-3. 增加一个新的选项到引导菜单
+3 增加一个新的选项到引导菜单
 {% highlight C %}  
 bcdedit /displayorder {current} {ID} 
 {% endhighlight %}     
-4. 激活Debug
+4 激活Debug
 {% highlight C %}  
 bcdedit /debug {ID}
 {% endhighlight %}     
-5. 然后打开msconfig（打开Run：输入msconfig），在Boot项中选中刚刚新建的启动项，再选Advanced options，选中Debug、Debug port、Baud rate（默认已经选上了，如下图）。    
+5 然后打开msconfig（打开Run：输入msconfig），在Boot项中选中刚刚新建的启动项，再选Advanced options，选中Debug、Debug port、Baud rate（默认已经选上了，如下图）。    
 ![DebuggedSystemBootSettings]({{ site.rul }}/images/20141124/DebuggedSystemBootSettings.png)        
 
 ####四. Windbg配置
