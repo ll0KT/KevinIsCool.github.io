@@ -33,7 +33,7 @@ bcdedit /dbgsettings 或 bcdedit /dbgsettings serial bandrate:115200 debugport:1
 {% highlight C %}  
 bcdedit /copy {current} /d DebugEnty    
 {% endhighlight %}     
-**复制其中的ID号**  
+复制其中的ID号     
 3 增加一个新的选项到引导菜单
 {% highlight C %}  
 bcdedit /displayorder {current} {ID} 
