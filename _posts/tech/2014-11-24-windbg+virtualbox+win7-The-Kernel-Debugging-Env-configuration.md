@@ -11,9 +11,9 @@ category: tech
 
 
 看了网上很多的教程，一般都是Windbg+Vmware+win7和Windbg+VirtualBox+xp或者是Windbg+Vmware+XP的，没有找到Windbg+VirtualBox+win7的，于是只能根据一个VMware的自己配置一下，看看运气如何了。验证过后，发现，有效。下面分4个部分，简要说说。    
-####1. 虚拟机和windows 7系统安装
+####一. 虚拟机和windows 7系统安装
 这部分就不详细说了，网上有很多很多的教程.
-####2. 虚拟机配置
+####二. 虚拟机配置
 首先不要打开虚拟机里的系统。     
 设置 -> 串口：（如下图）    
 ![VirtualBoxSettings]({{ site.rul }}/images/20141124/VirtualBoxSettings.jpg)    
@@ -21,7 +21,7 @@ category: tech
 端口模式：主机管道    
 启用：创建通道    
 端口/文件位置：\\.\pipe\COM_1
-####3. windows 7系统配置
+####三. windows 7系统配置
 进入系统，以Administrator权限启动Command Line，键入命令：bcdedit，如下图。（因为我已经配置好了，所以会有3项）    
 ![DebuggedSystemSettings]({{ site.rul }}/images/20141124/DebuggedSystemSettings.png)    
 配置的命令依次为：    
@@ -37,22 +37,22 @@ bcdedit /copy {current} /d DebugEnty
 3. 增加一个新的选项到引导菜单
 {% highlight C %}  
 bcdedit /displayorder {current} {ID} 
-{% endhighlight %} 
+{% endhighlight %}     
 4. 激活Debug
 {% highlight C %}  
 bcdedit /debug {ID}
-{% endhighlight %} 
+{% endhighlight %}     
 5. 然后打开msconfig（打开Run：输入msconfig），在Boot项中选中刚刚新建的启动项，再选Advanced options，选中Debug、Debug port、Baud rate（默认已经选上了，如下图）。    
 ![DebuggedSystemBootSettings]({{ site.rul }}/images/20141124/DebuggedSystemBootSettings.png)        
 
-####4. Windbg配置
-Windbg下载：[Here](http://www.windbg.org/X86%20Debuggers%20And%20Tools-x86_en-us.msi)    
+####四. Windbg配置
+Windbg下载：[Here](http://www.windbg.org/)    
 安装完成后在桌面创建一个快捷方式，然后右键->属性，在Target中的引号后面添加如下：    
 {% highlight C %}
 -b -k com:port=\\.\pipe\com_1,baud=115200,pipe
 {% endhighlight %}
 ![WindbgSettings]({{ site.rul }}/images/20141124/WindbgSettings.png)    
-####5. 完成
+####五. 完成
 到目前，所有的配置工作基本就完成了。    
 然后启动Windbg，会显示：    
 waiting to connect ...    
