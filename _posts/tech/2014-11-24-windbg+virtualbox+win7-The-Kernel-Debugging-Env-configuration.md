@@ -10,9 +10,9 @@ category: tech
 <p class="meta">24 November 2014 - Harbin</p>
 
 
-看了网上很多的教程，一般都是Windbg+Vmware+win7和Windbg+VirtualBox+xp或者是Windbg+Vmware+XP的，没有找到#Windbg+VirtualBox+win7的，于是只能根据一个VMware的自己配置一下，看看运气如何了。验证过后，发现，有效。下面分4个部分，简要说说。    
+看了网上很多的教程，一般都是Windbg+Vmware+win7和Windbg+VirtualBox+xp或者是Windbg+Vmware+XP的，没有找到Windbg+VirtualBox+win7的，于是只能根据一个VMware的自己配置一下，看看运气如何了。验证过后，发现，有效。下面分4个部分，简要说说。    
 ####1. 虚拟机和windows 7系统安装
-这部分就不详细说了，网上有很多很多的教程，一看就会……
+这部分就不详细说了，网上有很多很多的教程.
 ####2. 虚拟机配置
 首先不要打开虚拟机里的系统。     
 设置 -> 串口：（如下图）    
@@ -42,7 +42,7 @@ bcdedit /displayorder {current} {ID}
 {% highlight C %}  
 bcdedit /debug {ID}
 {% endhighlight %} 
-5. 然后打开msconfig（打开Run：输入msconfig），在Boot项中选中刚刚新建的启动项，再选Advanced options，选中Debug、Debug port、Baud rate（默认已经选上了，如下图）。
+5. 然后打开msconfig（打开Run：输入msconfig），在Boot项中选中刚刚新建的启动项，再选Advanced options，选中Debug、Debug port、Baud rate（默认已经选上了，如下图）。    
 ![DebuggedSystemBootSettings](./images/20141124/DebuggedSystemBootSettings.png)        
 
 ####4. Windbg配置
@@ -57,4 +57,7 @@ Windbg下载：[Here](http://www.windbg.org/X86%20Debuggers%20And%20Tools-x86_en
 然后启动Windbg，会显示：    
 waiting to connect ...    
 然后启动系统，到系统进入引导时，会被中断，Windbg显示如下：    
-![OK](./images/20141124/OK.png)    
+![OK](./images/20141124/OK.png)  
+
+参考：
+1. [VMware+Windgb+Win7内核驱动调试](http://yexin218.iteye.com/blog/545187)  
