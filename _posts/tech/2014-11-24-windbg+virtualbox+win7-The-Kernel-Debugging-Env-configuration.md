@@ -10,7 +10,7 @@ category: tech
 <p class="meta">24 November 2014 - Harbin</p>
 
 
-看了网上很多的教程，一般都是Windbg+Vmware+win7和Windbg+VirtualBox+xp或者是Windbg+Vmware+XP的，没有找到Windbg+VirtualBox+win7的，于是只能根据一个VMware的自己配置一下，看看运气如何了。验证过后，发现，有效。下面分4个部分，简要叙述。    
+看了网上很多的教程，一般都是Windbg+Vmware+win7和Windbg+VirtualBox+xp或者是Windbg+Vmware+XP的，没有找到Windbg+VirtualBox+win7的，于是只能根据一个VMware的自己配置一下，看看运气如何了。验证过后，发现，有效。下面分6个部分，简要叙述。    
 ###一. 虚拟机和windows 7系统安装
 这部分就不详细说了，网上有很多很多的教程.
 ###二. 虚拟机配置
