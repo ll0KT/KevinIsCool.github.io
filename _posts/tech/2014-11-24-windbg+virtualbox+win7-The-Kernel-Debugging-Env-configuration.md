@@ -62,9 +62,9 @@ Windbg下载：[Here](http://www.windbg.org/)
 如上图，我们可以看到有两个ERROR：`Symbol file could not be found.`    
 下面是如何配置Symbol目录。    
 Windbg访问符号需要两个文件：SYMSRV.DLL和SYMSTORE.EXE，这两个文件都在Windbg的安装目录中：    
-`C:\\Program Files\\windows Kits\\8.1\\Debuggers\\x86.`       
+`C:\Program Files\windows Kits\8.1\Debuggers\x86.`       
 所以第一步是将这个目录加入到系统的环境变量path中。    
-第二步：新建环境变量_NT_SYMBOL_PATH,值为：`C:\\Symbols;SRV\*c:\\Symbol\* http:/msdl.microsoft.com/downloa/ymbols `   
+第二步：新建环境变量_NT_SYMBOL_PATH,值为：`C:\Symbols;SRV*C:\Symbol* http:/msdl.microsoft.com/downloa/ymbols `   
 第三步：重启计算机。
 
 参考：    
