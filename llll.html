@@ -9,22 +9,28 @@ title: llll
     {% for post in site.categories.life %}
       <li><span>{{ post.date | date_to_string }}</span> &raquo;&nbsp; <a style="text-decoration:none;" href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
-    
-    {% for category in site.categories %}
-		<h2>{{ category | first }}</h2>
-		</span>{{ category | last | size }}</span>
-		<ul class="arc-list">
-  	  		{% for post in category.last %}
-     		   <li>{{ post.date | date:"%d/%m/%Y"}}<a 			href="{{ post.url }}">{{ post.title }}</a></li>
-     		{% endfor %}
-		</ul>
-	{% endfor %} 
-	   
   </ul>
 </div>
 
+<div id="category"> 
+	<h1>ALL</h1>   
+    {% for category in site.categories %}
+		<h2>{{ category | first }}</h2>
+		<ul class="posts">
+  	  		{% for post in category.last %}
+     		   <li><span>{{ post.date | date_to_string }}</span> &raquo;&nbsp;<a style="text-decoration:none;" href="{{ post.url }}">{{ post.title }}</a>
+     		   </li>
+     		{% endfor %}
+		</ul>
+	{% endfor %} 
+</div>
 
-<pre class="html" name="colorcode"> <h4>Category</h4> <ul> //这里使用了 Jekyll 语法，会被编译，所以加多个”" 
-{% for category in site.categories %} 
-<li><a href=”/categories/{{ category | first }}/” title=”view all posts”>{{ category | first }} {{ category | last | size }}</a> </li> 
-{% endfor %} </ul> </pre>
+
+<div id="cate">
+ <h4>Category</h4> 
+ <ul class="posts">
+ 	{% for category in site.categories %} 
+		<li><a href="/categories/{{ category | first }}.html">		{{ category | first }} {{ category | last | size }}</a> </li> 
+	{% endfor %} 
+ </ul>
+</div>
