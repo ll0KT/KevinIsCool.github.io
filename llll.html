@@ -2,9 +2,8 @@
 layout: default
 title: llll
 ---
-<div id="main">
 
-<div id="containe"> 
+<div id="categ"> 
 	<h1>ALL</h1>   
     {% for category in site.categories %}
 		<h2>{{ category | first }}</h2>
@@ -18,13 +17,11 @@ title: llll
 </div>
 
 
-<div style="float:right" id="sidebar">
+<div style="float:right" id="cate">
  <h4>Category</h4> 
  <ul class="posts">
  	{% for category in site.categories %} 
 		<li>&raquo;&nbsp;<a style="text-decoration:none;" href="/category/{{ category | first }}.html">{{ category | first }}({{ category | last | size }})</a> </li> 
 	{% endfor %} 
  </ul>
-</div>
-
 </div>
