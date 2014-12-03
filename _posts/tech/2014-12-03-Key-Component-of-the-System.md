@@ -11,8 +11,10 @@ category: tech
 
 ##关键的系统组件
 ###环境子系统和子系统DLL
-环境子系统：将基本的Windows执行体系统服务的**某个子集**暴露给应用程序。每个子系统具有对Windows原生服务一个不同子集的访问能力。这就是说建立在某个子系统之上的应用程序可以做到的事情，不一定在另一个子系统上能够做到。    
-每个可执行映像（.exe）都被绑定到**唯一的**子系统上。映像文件运行时，都会先根据头部的子系统类型代码，通知对应的子系统有新的进程创建。`在Microsoft Visual C++中，link命令的/SUBSYSTEM修饰符可以指定该类型代码。`应用程序不直接调用Windows的系统服务，而是通过通过一个或多个子系统DLL来间接调用系统服务。Windows子系统DLL：Kernel32.dll、advapi32.dll、User32.dll、Gdi32.dll实现了Windows API函数；SUA（Windows下的UNIX子系统）子系统DLL：Psxdll.dll实现了SUA API函数。    
+环境子系统：将基本的Windows执行体系统服务的**某个子集**暴露给应用程序。每个子系统具有对Windows原生服务一个不同子集的访问能力。这就是说建立在某个子系统之上的应用程序可以做到的事情，不一定在另一个子系统上能够做到。 
+   
+每个可执行映像（.exe）都被绑定到**唯一的**子系统上。映像文件运行时，都会先根据头部的子系统类型代码，通知对应的子系统有新的进程创建。`在Microsoft Visual C++中，link命令的/SUBSYSTEM修饰符可以指定该类型代码。`应用程序不直接调用Windows的系统服务，而是通过通过一个或多个子系统DLL来间接调用系统服务。Windows子系统DLL：Kernel32.dll、advapi32.dll、User32.dll、Gdi32.dll实现了Windows API函数；SUA（Windows下的UNIX子系统）子系统DLL：Psxdll.dll实现了SUA API函数。 
+   
 当应用程序调用子系统DLL中的某个函数时，会发生下述三件事之一： 
    
 * 该函数完全是在该子系统DLL中实现的（也就是说该程序并没有给环境子系统进程发送消息，也没有调用Windows执行体系统服务），则在用户模式下运行：如`GetCurrentProcess`、`GetCurrentProcessId`函数；    
@@ -22,7 +24,7 @@ category: tech
 *有的函数是以上2和3的组合，如Windows的**`CreateProcess`**和**`CreateThread`**函数*    
 
 ####子系统启动
-子系统由会话管理器(Session Manager)(Smss.exe)进程来启动。启动信息保存于注册表的以下键值中：HKLM\SYSTEM\CurrentControlSet\Session Manager\Subsystem.    
+子系统由会话管理器(Session Manager)(Smss.exe)进程来启动。启动信息保存于注册表的以下键值中：HKLM\SYSTEM\CurrentControlSet\ Session Manager\Subsystem.    
 ![RegSessionManager]({{site.url}}/images/20141203/RegSessionManager.png)    
 
 - Required: 系统引导时加载的子系统。该值是两个字符串(Windows和Debug)。
