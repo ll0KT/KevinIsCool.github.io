@@ -3,26 +3,34 @@ layout: default
 title: KevinIsCool
 ---
 <div id="main">
-	<div id="home">
-	  <h1>Blog Posts</h1>
-	  <ul class="posts">
-		{% for post in site.posts %}
-		  <li><span>{{ post.date | date_to_string }}</span> &raquo; &nbsp;<a style="text-decoration:none;" href="{{ post.url }}">{{ post.title }}</a></li>
-		{% endfor %}
-	  </ul>
-	</div>
-</div>
+  <div id="home">
+    <h1>Blog Posts</h1>
+    <ul class="posts">
+      {% for post in site.posts %}
+        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+    
+    <h1>Open Source Projects</h1>
+    <ul class="posts">
+      <li><a href="http://sonar.codehaus.org/">Sonar:</a> An open platform to manage code quality.</li>
+      <li><a href="http://github.com/zigzag/ready_for_i18n/">ready_for_i18n:</a> A handy tool helping transfer your local Rails project to an i18n one.</li>
+      <li><a href="http://github.com/zigzag/iTBD/">iTBD:</a> A super lightweight TODO list and time tracking app using Rails3 + jQuery1.4 </li>
+    </ul>
+  </div>
+</div>   
 <div id="sidebar">
   <div>
-	<img src=""/><br/>
-	<p>My name is <b>hhhhh</b></p>
-	
-	<p>I am a Ruby developer and an OpenSource advocate.</p>
+    <img src="http://www.gravatar.com/avatar/ff30887a15cf2a6f70c780c7a4bc176c?rating=G&size=100"/><br/>
+    <p>My name is <b>Zigzag Chen.</b></p>
+    
+    <p>I am a Ruby developer and an OpenSource advocate.</p>
 
-	<p>I started working as a programmer since 7 years ago. During the career path from a developer to a project manager, I keep my passion of coding.</p>
-	
-	<p>Since 2008 I chose Ruby as my main programming language because I was impressed by it's elegance. I learned a lot from the Open Source community and always pleasure to contribute back on <a href="http://github.com/zigzag">github</a>.</p>
-	
-	<p>Follow me on twitter: <a href="http://twitter.com/zigzagchen">@zigzagchen</a></p>
+    <p>I started working as a programmer since 7 years ago. During the career path from a developer to a project manager, I keep my passion of coding.</p>
+    
+    <p>Since 2008 I chose Ruby as my main programming language because I was impressed by it's elegance. I learned a lot from the Open Source community and always pleasure to contribute back on <a href="http://github.com/zigzag">github</a>.</p>
+    
+    <p>Follow me on twitter: <a href="http://twitter.com/zigzagchen">@zigzagchen</a></p>
   </div>
 </div>
+
