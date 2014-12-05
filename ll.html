@@ -1,0 +1,29 @@
+---
+layout: default
+title: KevinIsCool
+---
+<div id="main">
+	<div id="home">
+	  <h1>Blog Posts</h1>
+	  <ul class="posts">
+		{% for post in site.posts %}
+		  <li><span>{{ post.date | date_to_string }}</span> &raquo; &nbsp;<a style="text-decoration:none;" href="{{ post.url }}">{{ post.title }}</a></li>
+		{% endfor %}
+	  </ul>
+	</div>
+
+<div id="sidebar">
+  <div>
+    <img src=""/><br/>
+    <p>My name is <b>hhhhh</b></p>
+    
+    <p>I am a Ruby developer and an OpenSource advocate.</p>
+
+    <p>I started working as a programmer since 7 years ago. During the career path from a developer to a project manager, I keep my passion of coding.</p>
+    
+    <p>Since 2008 I chose Ruby as my main programming language because I was impressed by it's elegance. I learned a lot from the Open Source community and always pleasure to contribute back on <a href="http://github.com/zigzag">github</a>.</p>
+    
+    <p>Follow me on twitter: <a href="http://twitter.com/zigzagchen">@zigzagchen</a></p>
+  </div>
+  
+</div>
