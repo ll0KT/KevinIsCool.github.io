@@ -25,3 +25,17 @@ title: llll
 	{% endfor %} 
  </ul>
 </div>
+
+
+  - site.collated_posts.sort.reverse.each do |year,months|
+    %section.year
+      %h2.year= year
+      - months.sort.reverse.each do |month,days|
+        %div
+          %h3.month= Date::MONTHNAMES[month]
+          %ul.posts
+            - days.sort.reverse.each do |day,posts|
+              - posts.each do |post|
+                %li
+                  %time{ :datetime => post.date.strftime("%Y-%m-%d") }= "%02d" % day
+                  = post_link(post)
