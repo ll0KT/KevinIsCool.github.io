@@ -1,6 +1,5 @@
 /**
- * Created by luolinjia on 10/13/14.
- * Updated by luolinjia on 10/16/14.
+ * Modified by Kevin on 12/09/14.
  */
 
 $(function(){
@@ -27,16 +26,16 @@ $(function(){
         $('#w-tags').fadeIn(1000);
         $('#w-none').fadeIn(1400);
         $('#word').fadeIn(300, function() {
-            $(this).empty().append('当你驻足这里，便是故事！');
+            $(this).empty().append('----------');
         });
 
     }).mouseleave(function () {
         $('#word').fadeOut(300).empty();
     });
 
-    _.showWord($iPost, '故事的主角总是善意地提醒周围人恶意的目光', 'http://www.llokt.com/Kevin');
-    _.showWord($iAbout, '偶尔，他也总是自欺欺人！', 'http://www.llokt.com/Kevin/about');
-    _.showWord($iTags, '他却用温暖的内心感染着身边的每个人', 'http://www.llokt.com/Kevin/tags');
-    _.showWord($iNone, '然后，他在你的心中驻留。', 'http://www.llokt.com');
+    _.showWord($iPost, '----------', 'http://www.llokt.com/Kevin');
+    _.showWord($iAbout, '----------', 'http://www.llokt.com/Kevin/about');
+    _.showWord($iTags, '----------', 'http://www.llokt.com/Kevin/tags');
+    _.showWord($iNone, '----------', 'http://www.llokt.com');
 
 });
