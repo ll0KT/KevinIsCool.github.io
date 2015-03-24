@@ -26,14 +26,14 @@ $(function(){
         $('#w-tags').fadeIn(1000);
         $('#w-none').fadeIn(1400);
         $('#word').fadeIn(300, function() {
-            $(this).empty().append(¡®the¡¯);
+            $(this).empty().append(¡®¡ª¡¯);
         });
 
     }).mouseleave(function () {
         $('#word').fadeOut(300).empty();
     });
 
-    _.showWord($iPost, ¡®ARCHIVE¡¯, 'http://www.llokt.com/Kevin');
+    _.showWord($iPost, ¡®ARCHIVES¡¯, 'http://www.llokt.com/Kevin');
     _.showWord($iAbout, ¡®ABOUT¡¯, 'http://www.llokt.com/Kevin/about');
     _.showWord($iTags, ¡®TAGS¡¯, 'http://www.llokt.com/Kevin/tags');
     _.showWord($iNone, ¡®HOME¡¯, 'http://www.llokt.com');
