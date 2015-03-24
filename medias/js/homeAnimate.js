@@ -26,14 +26,14 @@ $(function(){
         $('#w-tags').fadeIn(1000);
         $('#w-none').fadeIn(1400);
         $('#word').fadeIn(300, function() {
-            $(this).empty().append('----------');
+            $(this).empty().append(‘智者千虑 必有一失’);
         });
 
     }).mouseleave(function () {
         $('#word').fadeOut(300).empty();
     });
 
-    _.showWord($iPost, '----------', 'http://www.llokt.com/Kevin');
+    _.showWord($iPost, ‘ARCHIVES’, 'http://www.llokt.com/Kevin');
     _.showWord($iAbout, '----------', 'http://www.llokt.com/Kevin/about');
     _.showWord($iTags, '----------', 'http://www.llokt.com/Kevin/tags');
     _.showWord($iNone, '----------', 'http://www.llokt.com');
