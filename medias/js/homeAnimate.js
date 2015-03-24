@@ -34,7 +34,7 @@ $(function(){
     });
 
     _.showWord($iPost, ¡®ARCHIVES¡¯, 'http://www.llokt.com/Kevin');
-    _.showWord($iAbout, '----------', 'http://www.llokt.com/Kevin/about');
+    _.showWord($iAbout, ¡®ABOUT¡¯, 'http://www.llokt.com/Kevin/about');
     _.showWord($iTags, '----------', 'http://www.llokt.com/Kevin/tags');
     _.showWord($iNone, '----------', 'http://www.llokt.com');
 
