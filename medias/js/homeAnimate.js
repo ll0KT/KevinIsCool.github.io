@@ -26,7 +26,7 @@ $(function(){
         $('#w-tags').fadeIn(1000);
         $('#w-none').fadeIn(1400);
         $('#word').fadeIn(300, function() {
-            $(this).empty().append(‘智者千虑 必有一失’);
+            $(this).empty().append(‘the’);
         });
 
     }).mouseleave(function () {
