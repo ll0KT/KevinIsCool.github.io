@@ -26,16 +26,16 @@ $(function(){
         $('#w-tags').fadeIn(1000);
         $('#w-none').fadeIn(1400);
         $('#word').fadeIn(300, function() {
-            $(this).empty().append(°Æ°Ø);
+            $(this).empty().append('Êô∫ËÄÖÂçÉËôë ÂøÖÊúâ‰∏ÄÂ§±');
         });
 
     }).mouseleave(function () {
         $('#word').fadeOut(300).empty();
     });
 
-    _.showWord($iPost, °ÆARCHIVES°Ø, 'http://www.llokt.com/Kevin');
-    _.showWord($iAbout, °ÆABOUT°Ø, 'http://www.llokt.com/Kevin/about');
-    _.showWord($iTags, '----------', 'http://www.llokt.com/Kevin/tags');
-    _.showWord($iNone, '----------', 'http://www.llokt.com');
+    _.showWord($iPost, 'ARCHIVES', 'http://www.llokt.com/Kevin');
+    _.showWord($iAbout, 'ABOUT', 'http://www.llokt.com/Kevin/about');
+    _.showWord($iTags, 'TAGS', 'http://www.llokt.com/Kevin/tags');
+    _.showWord($iNone, 'HOME', 'http://www.llokt.com');
 
 });
